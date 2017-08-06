@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Syncing Paragraphs and Inputs</title>
+	<script type="text/javascript">
+		function onChangeHandler(event) {
+			var inputElements = document.getElementsByTagName('input');
+			var paraElement = document.getElementById('targetPara');
+			var finalInput = event.currentTarget.value;
+			for(var i=0; i<inputElements.length; i++)
+				inputElements[i].value = finalInput;
+			paraElement.textContent = finalInput;
+		}
+	</script>
+</head>
+<body>
+<input type="text" oninput="onChangeHandler(event)" />
+<input type="text" oninput="onChangeHandler(event)" />
+<input type="text" oninput="onChangeHandler(event)" />
+<p id='targetPara'></p>
+</body>
+</html>
