@@ -1,0 +1,8 @@
+.hide {
+	display: none;
+}
+#dataRetriever {
+	background-color: #fb0;
+	padding: 20px;
+	cursor: pointer;
+}

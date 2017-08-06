@@ -1,0 +1,22 @@
+JSON is JavaScript Object Notation and it's the most commmon way of storing data on the web and also the most common way for retrieval and it's all about objects and arrays. 
+So JSON is nothing but objects and arrays nested inside each other.
+
+The process of sending or loading the data on the fly without a page reload is known as AJAX ie. Asynchronous JavaScript and XML.
+
+So, XMLHttpRequest let's us send or recceive data.
+'GET' is for getting data from a server and 'POST' is for sending data to a server.
+The XMLHttpRequest has an open method which then takes two arguments:
+1. Whether we want to send or recieive data ie. GET or POST
+2. The url in which we want to send or recieive data.
+
+Although, the data that we get in response is pure text and the browser treats it like a text string, giving us unexpected results. So we need to tell the browser that the data we received needs to be treated as JSON and not as text.
+We use the method JSON.parse and pass our response data as an argument to this method which in turn parses it as JSON.
+
+Also AJAX involves XML which is nothing but another format of data which is very similar to JSON, but generally JSON is preferred more in the industry as a data format.
+
+You can build APIs that pull data from a database.
+
+Extra Points:
+
+1. Google for Fill text JSON that gives us tons of json to experiment with.
+2. You can use Handlebars.js for creating HTML from json data.
