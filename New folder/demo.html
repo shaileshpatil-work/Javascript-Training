@@ -3,28 +3,51 @@
 <head>
 	<title></title>
 <style type="text/css">
-	
+	.demo{
+		position: relative;
+	}
+	.one{
+		display: none;
+	}
+	.next{
+		position: absolute;
+		top: 70px;
+		left:30px;
+		display: none;
+	}
 </style>
 </head>
 <body>
 
-<a href="#" class="btn">Click</a>
-<ul>
-	<li><a href="#">One</a></li>
-	<li><a href="#">Two</a></li>
-	<li><a href="#">Three</a></li>
-</ul>
-
+<div class="demo">
+	<a href="#" class="btn">Click</a>
+	<ul class="one">
+		<li><a href="#">One</a></li>
+		<li><a href="#">Two</a></li>
+		<li><a href="#" class="three">Three</a></li>
+	</ul>
+	<ul class="next">
+		<li><a href="#">One</a></li>
+		<li><a href="#">Two</a></li>
+		<li><a href="#">Three</a></li>
+	</ul>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 	
 		$(".btn").click(function(e){
-			$("ul").slideToggle();
+			$(".one").slideToggle();
 			e.stopPropagation();
 		});
-			$("html").click(function(){
-			$("ul").css({"display":"none"});
+		$(".three").click(function(e){
+			$(".next").slideToggle();
+			e.stopPropagation();
+		});
+
+			$("html,body").click(function(){
+			$(".one").css({"display":"none"});
+			$(".next").css({"display":"none"});
 		});
 	});
 </script>
