@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	.demo{
+		position: relative;
+	}
+	.one{
+		display: none;
+	}
+	.next{
+		position: absolute;
+		top: 70px;
+		left:30px;
+		display: none;
+	}
+</style>
+</head>
+<body>
+
+<div class="demo">
+	<a href="javascript:void(0)" class="btn">Click</a>
+	<ul class="one">
+		<li><a href="javascript:void(0)">One</a></li>
+		<li><a href="javascript:void(0)">Two</a></li>
+		<li><a href="javascript:void(0)" class="three">Three</a></li>
+	</ul>
+	<ul class="next">
+		<li><a href="javascript:void(0)">One</a></li>
+		<li><a href="javascript:void(0)">Two</a></li>
+		<li><a href="javascript:void(0)">Three</a></li>
+	</ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$(".btn").click(function(e){
+			$(".one").slideToggle();
+			e.stopPropagation();
+		});
+		$(".three").click(function(e){
+			$(".next").slideToggle();
+			e.stopPropagation();
+		});
+
+			$("html,body").click(function(){
+			$(".one").css({"display":"none"});
+			$(".next").css({"display":"none"});
+		});
+	});
+</script>
+</body>
+</html>
