@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+
+<a href="#" class="btn">Click</a>
+<ul>
+	<li><a href="#">One</a></li>
+	<li><a href="#">Two</a></li>
+	<li><a href="#">Three</a></li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$(".btn").click(function(e){
+			$("ul").slideToggle();
+			e.stopPropagation();
+		});
+			$("html").click(function(){
+			$("ul").css({"display":"none"});
+		});
+	});
+</script>
+</body>
+</html>
