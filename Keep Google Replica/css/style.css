@@ -1,0 +1,16 @@
+.initialNote {
+	background-color: #FB0;
+	padding: 6px;
+	font-size: 14px;
+	min-height: 20px;
+}
+
+.initialNotePreceder {
+	position: absolute;
+	padding: 6px;
+	font-size: 14px;
+}
+
+.hide {
+	display: none;
+}
