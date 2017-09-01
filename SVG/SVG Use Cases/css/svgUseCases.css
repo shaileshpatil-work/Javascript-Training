@@ -1,0 +1,36 @@
+.featuredIcons svg {
+	height: 60px;
+	margin: 0 auto;
+	margin-bottom: 7px;
+}
+
+.featuredIcons img {
+	width: 27px;
+}
+
+.featuredIcons img:hover {
+	transform: rotate(180deg);
+}
+
+.passengerIcon {
+	display: block;
+  width: 55px;
+  height: 60px;
+  background: url('../svg/passengerIcon.svg');
+  background-size: 55px 60px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.flightIconContainer {
+	transition: 0.2s all ease-in-out;
+}
+
+.flightIconContainer:hover {
+	transform: rotate(180deg);
+	background-color: black;
+}
+
+.flightIcon:hover path{
+	stroke: red;
+}
