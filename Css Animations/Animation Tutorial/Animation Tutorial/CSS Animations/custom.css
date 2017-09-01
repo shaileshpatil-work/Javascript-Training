@@ -1,0 +1,87 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,a, img, ul, li{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+h1{
+	font-size: 30px;
+	line-height: 32px;
+	color: blue;
+}
+h3{
+	font-size: 20px;
+	line-height: 22px;
+	margin: 20px;
+}
+p{
+	font-size: 18px;
+	line-height: 20px;
+	margin-left:50%;
+}
+.outerBox{
+	margin-bottom: 20px;
+}
+/*fadeInLeft*/
+
+.fadeInLeft{
+	animation:fadeInLeft 1s ease-in-out 0.5s;
+}
+@keyframes fadeInLeft{ 
+	0%{
+		opacity: 0;
+		transform: translate(-100%,0);
+	}
+	100%{
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/*FadeInRight*/
+
+.fadeInRight{
+	animation:fadeInRight 1s ease-in-out 0.5s 2;
+}
+
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform:translate(100%,0);
+	}
+	100%{
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/*FadeInUp*/
+.fadeInUp{
+	animation:fadeInUp 1s ease-in-out 0.5s infinite;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*FadeInDown*/
+.fadeInDown{
+	animation: fadeInDown 1s ease-in-out 0.5s infinite;
+}
+@keyframes fadeInDown{
+	0%{
+		opacity: 0;
+		transform: translate(0,-100%);
+	}
+	100%{
+		opacity: 1;
+		transform: none;
+	}
+}
