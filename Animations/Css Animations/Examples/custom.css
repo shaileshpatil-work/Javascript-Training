@@ -27,7 +27,19 @@ p {
 .fadeInLeft {
 	animation:fadeInLeft 1s ease-in-out 0.5s;
 }
+
 @keyframes fadeInLeft { 
+	0% {
+		opacity: 0;
+		transform: translate(-100%,0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@-webkit-keyframes fadeInLeft { 
 	0% {
 		opacity: 0;
 		transform: translate(-100%,0);
@@ -43,7 +55,19 @@ p {
 .fadeInRight {
 	animation:fadeInRight 1s ease-in-out 0.5s 2;
 }
+
 @keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform:translate(100%,0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@-webkit-keyframes fadeInRight {
 	0% {
 		opacity: 0;
 		transform:translate(100%,0);
@@ -59,7 +83,19 @@ p {
 .fadeInUp {
 	animation:fadeInUp 1s ease-in-out 0.5s infinite;
 }
+
 @keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate(0, 100%);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@-webkit-keyframes fadeInUp {
 	0% {
 		opacity: 0;
 		transform: translate(0, 100%);
@@ -75,7 +111,19 @@ p {
 .fadeInDown {
 	animation: fadeInDown 1s ease-in-out 0.5s infinite;
 }
+
 @keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translate(0,-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@-webkit-keyframes fadeInDown {
 	0% {
 		opacity: 0;
 		transform: translate(0,-100%);
