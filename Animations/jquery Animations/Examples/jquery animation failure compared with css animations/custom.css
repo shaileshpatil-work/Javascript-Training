@@ -1,0 +1,47 @@
+*{
+	margin:0;
+	padding:0;
+	border:0
+}
+.para 
+{
+	position: relative;
+}
+.animationPara 
+{
+	display: inline-block;
+	color: #fff;
+	animation:animationPara 1s ease-in-out forwards;
+}
+
+@keyframes animationPara 
+{
+	0% {
+		transform: translate(50px,0);
+		background: red;
+	}
+	50% {
+	 	transform: translate(100px,0);
+		background: green;
+	}
+	100%{
+		transform: translate(150px,0);
+		background: blue;
+	}
+}
+
+@-webkit-keyframes animationPara 
+{
+	0% {
+		transform: translate(50px,0);
+		background: red;
+	}
+	50% {
+	 	transform: translate(100px,0);
+		background: green;
+	}
+	100%{
+		transform: translate(150px,0);
+		background: blue;
+	}
+}

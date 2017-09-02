@@ -1,0 +1,39 @@
+CSS3 Animations:
+Most powerful CSS.
+Animation is gradually change from one state to another.
+Supported by all modern browsers.For -webkit-,-moz-,-ms-,-o-
+Animation attracts eyes easily.
+Most of the animations depends on CSS3 transform,So before going for animations you should know all the transform properties.
+Animations:
+  	Keyframes :
+Keyframes are like breakpoints.
+They decides behaviour of element at particular point.
+We write  particular css properties for particular breakpoint.
+keyframes are given in percentage.From 0%  to 100% .
+There can be multiple keyframes just like 0%,25%,75%,100%.
+	Syntax :
+General Syntax:
+	@keyframes animation-name
+	{
+		0%{css properties}
+		50%{ css proerties}
+		100%{ css properties}
+	 }
+@-webkit-keyframes animation-name
+	{
+		0%{css properties}
+		50%{ css proerties}
+		100%{ css properties}
+	}
+Animation Properties:
+animation-name : name of animation
+animation-duration : time duration.
+animation-iteration-count : cout (no. of times).infinite can be used.
+animation-direction : reverse (reverse direction),alternate
+animation-timing-function : ease,ease-in,ease-out,ease-in-out
+Shorthand property:
+animation:example 2s ease-in-out alternate;
+
+REFERENCE WEBSITES:
+1. W3schools.
+2.animate.css (best css properties you can use direct code from here just download that css and copy particular you want.)
