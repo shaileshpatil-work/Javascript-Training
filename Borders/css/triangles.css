@@ -1,0 +1,44 @@
+.borderBasics,
+.equilateral,
+.isoceles,
+.scalene {
+	position: relative;
+	padding: 60px 20px;
+}
+
+.borderBasics::after,
+.equilateral::after,
+.isoceles::after,
+.scalene::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	transform: translateY(-50%);
+}
+
+/* Code Also includes Border Shorthand properties */
+
+.borderBasics::after {
+	width: 20px;
+	height: 20px;
+	border: 40px solid;
+	border-color: #000 cyan green blue;
+}
+
+.equilateral::after {
+	border-bottom: 40px solid red;
+	border-right: 40px solid transparent;
+}
+
+.scalene::after {
+	border-left: 20px solid transparent;
+	border-bottom: 40px solid green;
+	border-right: 30px solid transparent;
+}
+
+.isoceles::after {
+	border-left: 20px solid transparent;
+	border-bottom: 40px solid cyan;
+	border-right: 20px solid transparent;
+}
