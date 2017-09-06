@@ -1,0 +1,57 @@
+h3 {
+	font-size: 20px;
+	line-height: 22px;
+	margin-bottom: 8px;
+}
+.section {
+	margin-bottom: 20px;
+}
+
+/*anchorStyling*/
+
+.anchorStyling a {
+	font-size: 16px;
+	line-height: 18px;
+}
+.anchorStyling a:link {
+	color: blue;
+}
+.anchorStyling a:visited {
+	color: red;
+}
+.anchorStyling a:hover {
+	color: green;
+}
+.anchorStyling a:active {
+	color: yellow;
+}
+
+/*Pseudo Child Classes*/
+
+.pseudoChild ul li a {
+	color: #ffffff;
+}
+.pseudoChild ul li {
+	margin-bottom: 10px;
+}
+.pseudoChild ul li:first-child {
+	background-color:green;
+}
+.pseudoChild ul li:last-child {
+	background-color: blue;
+}
+.pseudoChild ul li:nth-child(2),.pseudoChild ul li:nth-child(3) {
+	background-color: #000000;
+}
+
+/*Input Focus*/
+
+.inputsTypes input {
+	display: block;
+	width: 300px;
+	margin-bottom: 10px;
+}
+.inputsTypes input:focus {
+	background-color: gray;
+	border-color: red;
+}
