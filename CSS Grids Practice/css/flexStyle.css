@@ -1,52 +1,15 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background-color: #ccc;
-	font-family: sans-serif;
-	padding: 1rem;
-}
-
 .topStoryContainer {
 	display: flex;
 	justify-content: space-around;
 }
-
-.blueBox, .yellowBox, .whiteBox, .greenBox, footer {
-	padding: 3vw;
-	margin: 1rem;
-}
-
-.blueBox {
-	background-color: blue;
-	color: white;
-}
-
-.yellowBox {
-	background-color: yellow;
-}
-
-.whiteBox {
-	background-color: white;
-}
-
-.greenBox {
-	background-color: green;
-	color: white;
-}
-
 .storyContainer {
 	display: flex;
 }
-
 .subStoryContainer {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
 }
-
 .shortStoryContainer {
 	display: flex;
 	flex: 3;
@@ -55,27 +18,20 @@ body {
 	margin-right: 1rem;
 	border: 1px solid black;
 }
-
 .shortStoryContainer > div {
 	width: 35%;
 }
-
-.shortStoryContainer > .yellowBox, .shortStoryContainer > .blueBox {
+.shortStoryContainer > .yellowBox, 
+.shortStoryContainer > .blueBox {
 	display: flex;
 	min-height: 150px;
 	justify-content: space-between;
 }
-
-.shortStoryContainer > .yellowBox > div, .shortStoryContainer > .blueBox > div {
+.shortStoryContainer > .yellowBox > div, 
+.shortStoryContainer > .blueBox > div {
 	flex: 1;
-	background-color: cyan;
+	background-color: #0ff;
 	margin: 1rem;
-}
-
-footer {
-	background-color: black;
-	color: grey;
-	text-align: center;
 }
 
 @media only screen and (max-width: 991px) {

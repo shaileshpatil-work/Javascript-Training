@@ -5,7 +5,6 @@
 	position: relative;
 	padding: 60px 20px;
 }
-
 .topArrow::after,
 .rightArrow::after,
 .bottomArrow::after,
@@ -19,22 +18,18 @@
 	transform: translateY(-50%);
 	transform: rotate(45deg);
 }
-
 .topArrow::after {
 	border-left: 20px solid black;
 	border-top: 20px solid black;
 }
-
 .rightArrow::after {
 	border-top: 20px solid black;
 	border-right: 20px solid black;
 }
-
 .bottomArrow::after {
 	border-right: 20px solid black;
 	border-bottom: 20px solid black;
 }
-
 .leftArrow::after {
 	border-bottom: 20px solid black;
 	border-left: 20px solid black;
