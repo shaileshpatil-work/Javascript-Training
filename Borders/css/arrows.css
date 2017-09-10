@@ -19,18 +19,18 @@
 	transform: rotate(45deg);
 }
 .topArrow::after {
-	border-left: 20px solid black;
-	border-top: 20px solid black;
+	border-left: 20px solid #000;
+	border-top: 20px solid #000;
 }
 .rightArrow::after {
-	border-top: 20px solid black;
-	border-right: 20px solid black;
+	border-top: 20px solid #000;
+	border-right: 20px solid #000;
 }
 .bottomArrow::after {
-	border-right: 20px solid black;
-	border-bottom: 20px solid black;
+	border-right: 20px solid #000;
+	border-bottom: 20px solid #000;
 }
 .leftArrow::after {
-	border-bottom: 20px solid black;
-	border-left: 20px solid black;
+	border-bottom: 20px solid #000;
+	border-left: 20px solid #000;
 }
