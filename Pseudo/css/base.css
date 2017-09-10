@@ -4,10 +4,14 @@
 	list-style-type: none;
 	text-decoration: none;
 }
+body {
+	font:15px/17px "Times New Roman", Georgia, Serif;
+}
 .container {
 	width: 1170px;
 	margin: 0 auto;
 }
-.section {
+
+.content {
 	margin-bottom: 20px;
 }
