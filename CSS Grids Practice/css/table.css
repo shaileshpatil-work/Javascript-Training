@@ -1,0 +1,20 @@
+.tabTable {
+	width: auto;
+	border: 1px solid #757575;
+	display: table;
+	border-collapse: separate;
+	/*border-spacing: 15px;*/
+	transform: scaleY(-1);
+}
+.tabTable .item {
+	width: 100px;
+	height: 100px;
+	background-color: #f08080;
+	display: table;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+	margin: 1rem;
+	transform: scaleY(-1);
+	border: 1px solid #757575;
+}

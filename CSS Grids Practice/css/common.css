@@ -1,0 +1,25 @@
+.blueBox, 
+.yellowBox, 
+.whiteBox, 
+.greenBox, 
+footer {
+	padding: 3vw;
+	margin: 1rem;
+	background-color: #000;
+	color: #808080;
+	text-align: center;
+}
+.blueBox {
+	background-color: #00f;
+	color: #fff;
+}
+.yellowBox {
+	background-color: #ff0;
+}
+.whiteBox {
+	background-color: #fff;
+}
+.greenBox {
+	background-color: #008000;
+	color: #fff;
+}
