@@ -11,11 +11,17 @@ body {
 }
 
 .featuredIcons {
-	display: flex;
-	justify-content: space-around;
 	text-align: center;
-	margin-top: 20px;
-	flex-wrap: wrap;
+	margin-top: 50px;
+	padding-top: 50px;
+	clear: both;
+	float: none;
+	overflow: auto;
+}
+
+.featuredIcons li {
+	width: calc(100%/6);
+	float: left;
 }
 
 .featuredIcons span {
@@ -27,11 +33,8 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-	.featuredIcons {
-		justify-content: space-evenly;
-	}
 	.featuredIcons li {
-		max-width: 30%;
-		margin-bottom: 20px;
+		width: 30%;
+		margin-left: 20px;
 	}
 }

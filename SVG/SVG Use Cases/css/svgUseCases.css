@@ -1,15 +1,15 @@
 .featuredIcons svg {
-	height: 60px;
-	margin: 0 auto;
-	margin-bottom: 7px;
+	min-height: 60px;
+	margin: auto;
 }
 
-.featuredIcons img {
-	width: 27px;
-}
 
-.featuredIcons img:hover {
-	transform: rotate(180deg);
+.priceContainer img {
+	display: block;
+  width: 27px;
+  height: 44px;
+  min-height: 60px;
+  margin: auto;
 }
 
 .passengerIcon {
@@ -23,14 +23,82 @@
 }
 
 .flightIconContainer {
+	display: block;
+  width: 52px;
+  height: 61px;
+	margin: 0 auto;
+}
+
+.passengerIcon {
+	display: block;
+  width: 55px;
+  height: 60px;
+  background: url('../svg/passengerIcon.svg');
+  background-size: 55px 60px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.airframeContainer {
+}
+
+.airframeContainer {
+	transition: 0.2s all ease-in-out;
+	display: block;
+	line-height: 5px;
+}
+
+.airframeContainer svg {
+	width: 46px;
+	height: 53px;
 	transition: 0.2s all ease-in-out;
 }
 
-.flightIconContainer:hover {
-	transform: rotate(180deg);
+.airframeContainer:hover svg {
+	transform: rotate(180deg) scale(2);
 	background-color: black;
+	border-radius: 10px;
 }
 
 .flightIcon:hover path{
 	stroke: red;
+}
+
+.landingsIcon {
+	position: relative;
+	padding-top: 60px;
+}
+
+.landingsIcon:hover svg {
+	transform: rotate(180deg);
+}
+
+.landingsIcon svg {
+	transition: 0.2s all ease-in-out;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 60px;
+	height: 52px;
+	margin-left: -30px;
+}
+
+.landingsIconTwo {
+	position: relative;
+	padding-top: 60px;
+}
+
+.landingsIconTwo::before {
+	transition: 0.2s all ease-in-out;
+	content: url('../svg/landingsIcon.svg');
+	width: 60px;
+	height: 52px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -30px;
+}
+
+.landingsIconTwo:hover::before {
+	transform: rotate(180deg);
 }
