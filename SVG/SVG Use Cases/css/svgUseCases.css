@@ -40,9 +40,6 @@
 }
 
 .airframeContainer {
-}
-
-.airframeContainer {
 	transition: 0.2s all ease-in-out;
 	display: block;
 	line-height: 5px;
