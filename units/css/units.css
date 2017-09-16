@@ -1,63 +1,63 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 }
 
-:root{
+:root {
 	font-size: 20px;
 }
 
-body{
+body {
 	font-family: sans-serif;
 	font-size: 14px;
 }
 
-.units{
+.units {
 	display: flex;
 	flex-direction: column;
 }
 
-.units > div{
+.units > div {
 	background: lightcoral;
 	margin: 15px;
 }
 
-.units > div h3{
+.units > div h3 {
 	color: #000;
 	font-weight:600;
 }
 
-.pixel{
+.pixel {
 	width:5px;
 }
 
-.inches{
+.inches {
 	width:5in;
 }
 
-.centimeters{
+.centimeters {
 	width:5cm;
 }
 
-.milimeters{
+.milimeters {
 	width:5mm;
 }
 
-.points{
+.points {
 	width:5pt;
 }
 
-.picas{
+.picas {
 	width:5pc;
 }
 
-.percent-parent{
+.percent-parent {
 	width: 400px;
 	height: 400px;
 	background: rgba(117,117,117,0.5);
 }
 
-.percent-parent .percent-child{
+.percent-parent .percent-child {
 	width: 50%;
 	height: 50%;
 	background: lightblue;
@@ -66,59 +66,59 @@ body{
 
 /*================  Viewport css here  ================*/
 
-.viewportUnits > div{
+.viewportUnits > div {
 	margin: 15px;
 }
 
-.vw, .vh{
-  background: rgba(0,0,0,0.1);
-  padding: 2em;
-  box-sizing: border-box;
+.vw, .vh {
+	background: rgba(0,0,0,0.1);
+	padding: 2em;
+	box-sizing: border-box;
 }
 
-.vw{
-  width: 50vw;
-  height: auto;
+.vw {
+	width: 50vw;
+	height: auto;
 }
 
-.vw h1{
+.vw h1 {
 	font-size: 5vw;
 	margin-bottom: 15px;
 }
 
-.vw h3{
+.vw h3 {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 
-.vh h1{
+.vh h1 {
   font-size: 12vh;
 }
 
-.vmax{
-  background: #ddd;
-  height: 350px;
-  width: 30vmax;
+.vmax {
+	background: #ddd;
+	height: 350px;
+	width: 30vmax;
 }
 
-.vmin{
-  background: #ddd;
-  height: 350px;
-  width: 30vmin;
+.vmin {
+	background: #ddd;
+	height: 350px;
+	width: 30vmin;
 }
 
-.rem h1{
+.rem h1 {
 	font-size: 1rem;
 }
 
-.wrapper{
+.wrapper {
 	font-size: 10px;
 }
 
-.em{
+.em {
 	font-size: 2em;
-  background: rgba(117,117,117,0.1);
-  width: 6em;
+	background: rgba(117,117,117,0.1);
+	width: 6em;
 }
 
