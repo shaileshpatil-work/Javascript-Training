@@ -4,7 +4,7 @@
 }
 
 :root{
-font-size: 20px;
+	font-size: 20px;
 }
 
 body{
@@ -18,13 +18,13 @@ body{
 }
 
 .units > div{
- background: lightcoral;
- margin: 15px;
+	background: lightcoral;
+	margin: 15px;
 }
 
 .units > div h3{
- color: #000;
- font-weight:600;
+	color: #000;
+	font-weight:600;
 }
 
 .pixel{
@@ -109,8 +109,7 @@ body{
 }
 
 .rem h1{
-font-size: 1rem;
-
+	font-size: 1rem;
 }
 
 .wrapper{
