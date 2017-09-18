@@ -1,0 +1,17 @@
+* {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+	text-decoration: none;
+}
+body {
+	font: 15px/17px "Times New Roman", Georgia, Serif;
+}
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.content {
+	margin-bottom: 20px;
+}

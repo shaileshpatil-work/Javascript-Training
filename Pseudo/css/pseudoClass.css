@@ -1,0 +1,54 @@
+h3 {
+	font-size: 20px;
+	line-height: 22px;
+	margin-bottom: 8px;
+}
+
+/*anchorStyling*/
+
+.anchorStyling a {
+	font-size: 16px;
+	line-height: 18px;
+}
+.anchorStyling a:link {
+	color: #0000ff;
+}
+.anchorStyling a:visited {
+	color: #ff0000;
+}
+.anchorStyling a:hover {
+	color: #00ff00;
+}
+.anchorStyling a:active {
+	color: #ffff00;
+}
+
+/*Pseudo Child Classes*/
+
+.pseudoChild ul li a {
+	color: #ffffff;
+}
+.pseudoChild ul li {
+	margin-bottom: 10px;
+}
+.pseudoChild ul li:first-child {
+	background-color:#00ff00;
+}
+.pseudoChild ul li:last-child {
+	background-color: #0000ff;
+}
+.pseudoChild ul li:nth-child(2),.pseudoChild ul li:nth-child(3) {
+	background-color: #000000;
+}
+
+/*Input Focus*/
+
+.inputsType input {
+	display: block;
+	width: 300px;
+	margin-bottom: 10px;
+}
+.inputsType input:focus {
+	background-color: #d3d3d3;
+	border-color: #ff0000;
+}
