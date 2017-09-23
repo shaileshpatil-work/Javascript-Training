@@ -1,0 +1,44 @@
+Pre-requisites:
+Know HTML5 and CSS3 prior to learning Bootstrap.
+
+Why Bootstrap?
+It turns out that we end up using Bootstrap on a daily basis only to use it's media queries, but that's a very limited way of thinking about Bootstrap since we aren't using the framework to it's full potential, although we have included it anyway.
+So the thing is we need to focus more on the advanced plugins that Bootstrap provides us, such as modals, destroy methods, forms, dropdowns, etc. We shouldn't waste our time on a daily basis building each of such components from scratch.
+However, if the need be then we need to override all the default stylings of Bootstrap to customise the things according to our need, but it's still recommended by me that if you are about to use Bootstrap then use it's stylings mostly. Rarely you should override it's CSS and JS.
+
+Bootstrap 4:
+Pre-requisites:
+Know Flexbox.
+
+Container Widths:
+The big news is that now Bootstrap has shrunk it's container width from 1170px to 1140px along with 15px padding on both sides. So we only get to use 1110px for our contents.
+Also it has added a new media query for Mobile Landscape views like, (min-width: 576px). All the other media queries remain the same.
+
+Media Queries:
+
+col-xs-* < 575px
+col-sm-* > 576px
+col-md-* > 768px
+col-lg-* > 992px
+col-xl-* > 1200px
+
+The Flexbox Flux:
+The Biggest News is that Bootstrap 4 is built on Flexbox which tells that the rows in Bootstrap 4 are done as display: flex; and the columns have the flex property applied to it.
+So basically the CSS for.row and .col-* turns out to be:
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-1 {
+  -ms-flex: 0 0 8.333333%;
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+So, it kind of puts us in a restrictive position like we should use cols only inside rows so that the display: flex; & flex: 0 0 8.333333% parent-child turns out to be semantically correct. Otherwise cols turns out to be useless without row as parent. Refer the index.html which has such an example.
+So  you can no longer take advantage of using columns without rows or containers, since it's stripping everything off avoiding using floats and clearfixes.
