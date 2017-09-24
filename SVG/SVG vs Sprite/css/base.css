@@ -11,11 +11,16 @@ body {
 }
 
 .featuredIcons {
+	display: -ms-flexbox;
 	display: flex;
 	justify-content: space-around;
 	text-align: center;
 	margin-top: 20px;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+.featuredIcons li {
+	flex: 0 0 20%;
 }
 
 .featuredIcons span {
