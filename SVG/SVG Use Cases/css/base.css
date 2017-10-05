@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.featuredIcons {
+	text-align: center;
+	margin-top: 50px;
+	padding-top: 50px;
+	clear: both;
+	float: none;
+	overflow: auto;
+}
+
+.featuredIcons li {
+	width: calc(100%/6);
+	float: left;
+}
+
+.featuredIcons span {
+	display: block;
+}
+
+.featuredIcons span:last-child {
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+	.featuredIcons li {
+		width: 30%;
+		margin-left: 20px;
+	}
+}

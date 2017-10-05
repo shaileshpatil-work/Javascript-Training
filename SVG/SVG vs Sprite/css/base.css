@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.featuredIcons {
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin-top: 20px;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.featuredIcons li {
+	flex: 0 0 20%;
+}
+
+.featuredIcons span {
+	display: block;
+}
+
+.featuredIcons span:last-child {
+	font-weight: 600;
+}
+
+@media only screen and (max-width: 767px) {
+	.featuredIcons {
+		justify-content: space-evenly;
+	}
+	.featuredIcons li {
+		flex: 0 0 30%;
+		max-width: 30%;
+		margin-bottom: 20px;
+	}
+}

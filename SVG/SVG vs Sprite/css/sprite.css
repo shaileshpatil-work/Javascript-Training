@@ -1,0 +1,43 @@
+.icons {
+	background-image: url('../images/sprite.png');
+	display: block;
+	margin: 0 auto 10px;
+	height: 61px;
+}
+.priceIcon {
+	width: 27px;
+	height: 44px;
+	background-position: -24px -26px;	
+}
+.passengerIcon {
+	width: 55px;
+	height: 60px;	
+	background-position: -74px -18px;	
+}
+.flightIcon {
+	width: 52px;
+	height: 61px;	
+	background-position: -14px -88px;	
+}
+.airframeIcon {
+	width: 46px;
+	height: 53px;	
+	background-position: -78px -90px;	
+}
+.landingIcon {
+	width: 60px;
+	height: 52px;	
+	background-position: -9px -163px;	
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2 / 1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+   .icons {
+    background-image: url('../images/sprite-2x.png');
+    background-size: 150px auto;
+  }
+}
