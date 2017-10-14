@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Socket Programming</title>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:400,400i' rel='stylesheet'>
+	<link rel='stylesheet' type='text/css' href='./style.css'>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js'></script>
+</head>
+<body>
+	<div id='chatBox'>
+		<div id='chatWindow'>
+			<div id='output'></div>
+			<div id='feedback'></div>
+		</div> 
+		<input type='text' placeholder='Handle' name='Handle' id='handle' />
+		<input type='text' placeholder='Message' name='Message' id='message' />
+		<button id='send'>Send</button>
+	</div>
+	<script src='./chat.js'></script>
+</body>
+</html>
