@@ -1,0 +1,16 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "Full Stack with Node, Express, Mongo",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Akshay",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.13.1"
+  }
+}
