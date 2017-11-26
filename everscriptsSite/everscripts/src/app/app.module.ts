@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule, 
     MatCheckboxModule,
+    MatCardModule,
     RouterModule.forRoot(
       appRoutes
     )
