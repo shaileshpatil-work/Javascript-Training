@@ -39,6 +39,9 @@ var config = {
     compress: true,
     port: 8000
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     new htmlWebpackPlugin({
       template: SRC_DIR +  '/index.html',
