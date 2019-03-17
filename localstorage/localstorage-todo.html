@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Todo</title>
+    </head>
+
+    <body>
+
+        <form id="addPlaces">
+            <input type="text" placeholder="Add Place" />
+            <input type="submit" />
+        </form>
+        <ul id="listWrapper">
+        </ul>
+
+        <script>
+            let addPlaces = document.forms["addPlaces"];
+            let list = document.getElementById("listWrapper");
+
+            let placeArray = localStorage.getItem('place') ? localStorage.getItem('place').split(",") : [];
+
+            const createTodo = (inpVal) => {
+                let li = document.createElement("li");
+                let span = document.createElement("span");
+                let button = document.createElement("button");
+
+                li.appendChild(span);
+                li.appendChild(button);
+                list.appendChild(li);
+
+                span.textContent = inpVal;
+                button.textContent = "delete";
+            }
+
+            if (localStorage.getItem('place')) {
+                localStorage.getItem('place').split(",").map((item) => {
+                    return createTodo(item);
+                });
+            }
+
+            else {
+                addPlaces.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    let inpVal = addPlaces.querySelector("input[type='text']").value;
+
+                    placeArray.push(inpVal);
+
+                    createTodo(inpVal);
+
+                    localStorage.setItem('place', placeArray.toString());
+
+                    addPlaces.querySelector("input[type='text']").value = "";
+                })
+            }
+
+            list.addEventListener("click", (e) => {
+                if (e.target.tagName == "BUTTON") {
+                    e.target.parentElement.remove();
+
+                    let index = placeArray.indexOf(e.target.previousElementSibling.textContent);
+
+                    if (index > -1) {
+                        placeArray.splice(index, 1);
+                        localStorage.setItem('place', placeArray.toString());
+                    }
+
+                    console.log(placeArray);
+                }
+            })
+        </script>
+    </body>
+
+    </html>
