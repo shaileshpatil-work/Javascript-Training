@@ -1,77 +1,63 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Todo</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+</head>
 
-    <body>
+<body>
 
-        <form id="addPlaces">
-            <input type="text" placeholder="Add Place" />
-            <input type="submit" />
-        </form>
-        <ul id="listWrapper">
-        </ul>
+    <form id="addPlaces">
+        <input type="text" placeholder="Add Place" />
+        <input type="submit" />
+    </form>
+    <ul id="listWrapper">
+    </ul>
 
-        <script>
-            let addPlaces = document.forms["addPlaces"];
-            let list = document.getElementById("listWrapper");
+    <script>
+        const addPlaces = document.forms["addPlaces"];
+        const list = document.getElementById("listWrapper");
 
-            let placeArray = localStorage.getItem('place') ? localStorage.getItem('place').split(",") : [];
+        const placeArray = localStorage.getItem('place') ? localStorage.getItem('place').split(",") : [];
 
-            const createTodo = (inpVal) => {
-                let li = document.createElement("li");
-                let span = document.createElement("span");
-                let button = document.createElement("button");
+        const createTodo = (inpVal) => {
+            list.insertAdjacentHTML("beforeend", `<li><span>${inpVal}</span><button>Delete</button></li>`);
+        }
 
-                li.appendChild(span);
-                li.appendChild(button);
-                list.appendChild(li);
+        if (localStorage.getItem('place')) {
+            localStorage.getItem('place').split(",").map((item) => createTodo(item));
+        }
 
-                span.textContent = inpVal;
-                button.textContent = "delete";
-            }
+        addPlaces.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const inpVal = addPlaces.querySelector("input[type='text']").value;
 
-            if (localStorage.getItem('place')) {
-                localStorage.getItem('place').split(",").map((item) => {
-                    return createTodo(item);
-                });
-            }
+            placeArray.push(inpVal);
 
-            else {
-                addPlaces.addEventListener("submit", (e) => {
-                    e.preventDefault();
-                    let inpVal = addPlaces.querySelector("input[type='text']").value;
+            createTodo(inpVal);
 
-                    placeArray.push(inpVal);
+            localStorage.setItem('place', placeArray.toString());
 
-                    createTodo(inpVal);
+            addPlaces.querySelector("input[type='text']").value = "";
+        })
 
+
+        list.addEventListener("click", (e) => {
+            if (e.target.tagName == "BUTTON") {
+                e.target.parentElement.remove();
+
+                const index = placeArray.indexOf(e.target.previousElementSibling.textContent);
+
+                if (index > -1) {
+                    placeArray.splice(index, 1);
                     localStorage.setItem('place', placeArray.toString());
-
-                    addPlaces.querySelector("input[type='text']").value = "";
-                })
-            }
-
-            list.addEventListener("click", (e) => {
-                if (e.target.tagName == "BUTTON") {
-                    e.target.parentElement.remove();
-
-                    let index = placeArray.indexOf(e.target.previousElementSibling.textContent);
-
-                    if (index > -1) {
-                        placeArray.splice(index, 1);
-                        localStorage.setItem('place', placeArray.toString());
-                    }
-
-                    console.log(placeArray);
                 }
-            })
-        </script>
-    </body>
+            }
+        })
+    </script>
+</body>
 
-    </html>
+</html>
