@@ -18,22 +18,20 @@
     </ul>
 
     <script>
-        const addPlaces = document.forms["addPlaces"];
-        const list = document.getElementById("listWrapper");
-
-        const placeArray = localStorage.getItem('place') ? localStorage.getItem('place').split(",") : [];
-
-        const createTodo = (inpVal) => {
-            list.insertAdjacentHTML("beforeend", `<li><span>${inpVal}</span><button>Delete</button></li>`);
+        const addPlaces = document.forms["addPlaces"],
+         list = document.getElementById('listWrapper'),
+         placeArray = localStorage.getItem('place') ? localStorage.getItem('place').split(",") : [],
+         createTodo = (inpVal) => {
+            list.insertAdjacentHTML('beforeend', `<li><span>${inpVal}</span><button>Delete</button></li>`);
         }
 
         if (localStorage.getItem('place')) {
-            localStorage.getItem('place').split(",").map((item) => createTodo(item));
+            localStorage.getItem('place').split(',').map((item) => createTodo(item));
         }
 
-        addPlaces.addEventListener("submit", (e) => {
+        addPlaces.addEventListener('submit', (e) => {
             e.preventDefault();
-            const inpVal = addPlaces.querySelector("input[type='text']").value;
+            const inpVal = addPlaces.querySelector('input[type="text"]').value;
 
             placeArray.push(inpVal);
 
@@ -41,12 +39,13 @@
 
             localStorage.setItem('place', placeArray.toString());
 
-            addPlaces.querySelector("input[type='text']").value = "";
+            addPlaces.querySelector('input[type="text"]').value = "";
+            
         })
 
 
-        list.addEventListener("click", (e) => {
-            if (e.target.tagName == "BUTTON") {
+        list.addEventListener('click', (e) => {
+            if (e.target.tagName == 'BUTTON') {
                 e.target.parentElement.remove();
 
                 const index = placeArray.indexOf(e.target.previousElementSibling.textContent);
