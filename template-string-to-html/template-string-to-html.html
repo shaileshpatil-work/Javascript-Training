@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="content">
+        <p>content div</p>
+    </div>
+
+    <script>
+        let cont = document.getElementById("content");
+        cont.insertAdjacentHTML("afterbegin", `<p>After Begin</p>`);
+        cont.insertAdjacentHTML("afterend", `<p>After End</p>`);
+        cont.insertAdjacentHTML("beforebegin", `<p>Before Begin</p>`);
+
+        // position of appendChild is where it is written inside code
+        let div = document.createElement("div");
+        cont.appendChild(div);  
+
+        cont.insertAdjacentHTML("beforeend",`<p>before end</p>`);
+
+        cont.insertAdjacentHTML("afterend",`Text is insreted as text node check using inspect <p>Element is inserted as Element node</p>`);
+    </script>
+</body>
+</html>

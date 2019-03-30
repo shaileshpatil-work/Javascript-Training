@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+</head>
+
+<body>
+
+    <form id="addPlaces">
+        <input type="text" placeholder="Add Place" />
+        <input type="submit" />
+    </form>
+    <ul id="listWrapper">
+    </ul>
+
+    <script>
+        const addPlaces = document.forms["addPlaces"],
+         list = document.getElementById('listWrapper'),
+         placeArray = localStorage.getItem('place') ? localStorage.getItem('place').split(",") : [],
+         createTodo = (inpVal) => {
+            list.insertAdjacentHTML('beforeend', `<li><span>${inpVal}</span><button>Delete</button></li>`);
+        }
+
+        if (localStorage.getItem('place')) {
+            localStorage.getItem('place').split(',').map((item) => createTodo(item));
+        }
+
+        addPlaces.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const inpVal = addPlaces.querySelector('input[type="text"]').value;
+
+            placeArray.push(inpVal);
+
+            createTodo(inpVal);
+
+            localStorage.setItem('place', placeArray.toString());
+
+            addPlaces.querySelector('input[type="text"]').value = "";
+            
+        })
+
+
+        list.addEventListener('click', (e) => {
+            if (e.target.tagName == 'BUTTON') {
+                e.target.parentElement.remove();
+
+                const index = placeArray.indexOf(e.target.previousElementSibling.textContent);
+
+                if (index > -1) {
+                    placeArray.splice(index, 1);
+                    localStorage.setItem('place', placeArray.toString());
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
