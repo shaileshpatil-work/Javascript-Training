@@ -13,18 +13,43 @@ class App extends Component {
     });
   }
   
+  isBottom(el) {
+    return el.getBoundingClientRect().bottom <= window.innerHeight;
+  }
+
   componentDidMount(){
     this.unsplash.photos.listPhotos(2, 15, "latest")
       .then(toJson)
       .then(json => {
-        pic: json
+        this.setState({
+          pic: json
+        })
       });
+    document.addEventListener('scroll', this.trackScrolling);
   }
+
+  trackScrolling = () => {
+    const wrappedElement = document.getElementById('header');
+    if (this.isBottom(wrappedElement)) {
+      this.unsplash.photos.listPhotos(3, 15, "latest")
+        .then(toJson)
+        .then(data => {
+          this.setState({
+            // pic: [...this.state.pic,data]
+            pic: data
+          })
+        });
+    }
+  };
 
   render() {
     return (
       <div className="App">
-          <p>OK</p>
+          <ul className="listWrapper" id="header">
+            {
+              this.state.pic.map((item)=><li className="imageWrapper"><img src={item.urls.small}></img></li>)
+            }
+          </ul>
       </div>
     );
   }
