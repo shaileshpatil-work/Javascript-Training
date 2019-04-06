@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    this.unsplash.photos.listPhotos(2, 15, "latest")
+    this.unsplash.photos.listPhotos(2, 5, "latest")
       .then(toJson)
       .then(json => {
         this.setState({
@@ -31,12 +31,11 @@ class App extends Component {
   trackScrolling = () => {
     const wrappedElement = document.getElementById('header');
     if (this.isBottom(wrappedElement)) {
-      this.unsplash.photos.listPhotos(3, 15, "latest")
+      this.unsplash.photos.listPhotos(3, 5, "latest")
         .then(toJson)
         .then(data => {
           this.setState({
-            // pic: [...this.state.pic,data]
-            pic: data
+            pic: [...this.state.pic,...data]
           })
         });
     }
@@ -45,11 +44,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <ul className="listWrapper" id="header">
+          <ol className="listWrapper" id="header">
             {
-              this.state.pic.map((item)=><li className="imageWrapper"><img src={item.urls.small}></img></li>)
+              this.state.pic.map((item)=><li className="imageWrapper"><img src={item.urls.small} /></li>)
             }
-          </ul>
+          </ol>
       </div>
     );
   }
